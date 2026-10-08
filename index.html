@@ -11,29 +11,31 @@
             theme: {
                 extend: {
                     colors: {
-                        charcoal: '#121212',
-                        gold: '#D4AF37',
-                        'gold-light': '#F3E5AB',
-                        'gold-dark': '#AA7C11',
+                        charcoal: '#0E0E0E',
+                        'charcoal-light': '#161616',
+                        'charcoal-card': '#1B1B1B',
+                        gold: '#C5A059',         /* Rich metallic antique gold from logo */
+                        'gold-light': '#E2C27F',
+                        'gold-dark': '#9A732C',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-charcoal text-gray-100 font-sans antialiased selection:bg-gold selection:text-charcoal">
+<body class="bg-charcoal text-gray-200 font-sans antialiased selection:bg-gold selection:text-charcoal">
 
     <!-- Navigation Bar -->
-    <nav class="bg-[#181818] border-b border-gold/20 sticky top-0 z-50 shadow-lg">
+    <nav class="bg-charcoal-light border-b border-gold/25 sticky top-0 z-50 shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-24 items-center">
                 
                 <!-- Logo & Brand in Upper Left -->
                 <a href="index.html" class="flex items-center space-x-3 group">
-                    <img src="logo.jpeg" alt="Griffin Consulting Logo" class="h-14 w-auto rounded border border-gold/30 group-hover:border-gold transition">
+                    <img src="logo.jpeg" alt="Griffin Consulting Logo" class="h-14 w-auto rounded border border-gold/40 group-hover:border-gold transition">
                     <div>
                         <span class="text-xl font-bold tracking-wider text-gold block">GRIFFIN CONSULTING</span>
-                        <span class="text-xs text-gray-400 tracking-widest block">STRATEGY | PERFORMANCE | PEOPLE</span>
+                        <span class="text-xs text-gray-400 tracking-widest block font-medium">STRATEGY | PERFORMANCE | PEOPLE</span>
                     </div>
                 </a>
 
@@ -47,10 +49,10 @@
                             <span>About Us</span>
                             <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-64 bg-[#1a1a1a] border border-gold/30 shadow-2xl rounded-lg py-2 hidden group-hover:block transition-all">
-                            <a href="about-story.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition">Our Story</a>
-                            <a href="about-people.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition">Our People</a>
-                            <a href="about-strategy.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition">Our Strategy</a>
+                        <div class="absolute left-0 mt-2 w-64 bg-charcoal-card border border-gold/30 shadow-2xl rounded-lg py-2 hidden group-hover:block transition-all">
+                            <a href="about-story.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our Story</a>
+                            <a href="about-people.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our People</a>
+                            <a href="about-strategy.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our Strategy</a>
                         </div>
                     </div>
 
@@ -60,13 +62,13 @@
                             <span>Services</span>
                             <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-80 bg-[#1a1a1a] border border-gold/30 shadow-2xl rounded-lg py-2 hidden group-hover:block transition-all">
-                            <a href="services-training.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition">Training Needs Analysis</a>
-                            <a href="services-curriculum.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition">Learning Architecture & Curriculum Design</a>
-                            <a href="services-development.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition">Custom Course & Training Material Development</a>
-                            <a href="services-rollout.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition">Training Rollout & Change Facilitation</a>
-                            <a href="services-roi.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition">Evaluation & ROI Analytics</a>
-                            <a href="services-dap.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition">Custom In-App Digital Adoption Platform (DAP)</a>
+                        <div class="absolute left-0 mt-2 w-80 bg-charcoal-card border border-gold/30 shadow-2xl rounded-lg py-2 hidden group-hover:block transition-all">
+                            <a href="services-training.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Training Needs Analysis</a>
+                            <a href="services-curriculum.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Learning Architecture & Curriculum Design</a>
+                            <a href="services-development.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Custom Course & Training Material Development</a>
+                            <a href="services-rollout.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Training Rollout & Change Facilitation</a>
+                            <a href="services-roi.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Evaluation & ROI Analytics</a>
+                            <a href="services-dap.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Custom In-App Digital Adoption Platform (DAP)</a>
                         </div>
                     </div>
 
@@ -78,9 +80,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative bg-gradient-to-b from-[#1a1a1a] to-charcoal py-24 border-b border-gold/10">
+    <header class="relative bg-gradient-to-b from-charcoal-light to-charcoal py-24 border-b border-gold/15">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="text-gold uppercase tracking-widest text-sm font-semibold block mb-3">Griffin Property and Holdings DBA</span>
+            <span class="text-gold uppercase tracking-widest text-xs font-semibold block mb-3">Griffin Property and Holdings DBA</span>
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
                 Elevating Enterprise <span class="text-gold">Performance</span>
             </h1>
@@ -88,7 +90,7 @@
                 Specialized consulting at the intersection of strategic modernization, operational capability, and human capital transformation.
             </p>
             <div class="flex justify-center gap-4">
-                <a href="contact.html" class="px-8 py-3 bg-gold text-charcoal font-bold rounded shadow hover:bg-gold-light transition">Schedule a Consultation</a>
+                <a href="contact.html" class="px-8 py-3 bg-gold text-charcoal font-bold rounded shadow-lg hover:bg-gold-light transition">Schedule a Consultation</a>
                 <a href="services-training.html" class="px-8 py-3 border border-gold text-gold font-bold rounded hover:bg-gold/10 transition">Explore Services</a>
             </div>
         </div>
@@ -97,23 +99,23 @@
     <!-- Core Pillars -->
     <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-[#181818] border border-gold/20 p-8 rounded-lg shadow-xl">
+            <div class="bg-charcoal-card border border-gold/20 p-8 rounded-lg shadow-xl">
                 <h3 class="text-xl font-bold text-gold mb-3">Strategy</h3>
-                <p class="text-gray-400 text-sm">Aligning organizational vision with robust architecture, data-driven pathways, and change readiness plans.</p>
+                <p class="text-gray-400 text-sm leading-relaxed">Aligning organizational vision with robust architecture, data-driven pathways, and change readiness plans.</p>
             </div>
-            <div class="bg-[#181818] border border-gold/20 p-8 rounded-lg shadow-xl">
+            <div class="bg-charcoal-card border border-gold/20 p-8 rounded-lg shadow-xl">
                 <h3 class="text-xl font-bold text-gold mb-3">Performance</h3>
-                <p class="text-gray-400 text-sm">Optimizing workflows, measuring earned-value impact, and deploying advanced digital adoption platforms.</p>
+                <p class="text-gray-400 text-sm leading-relaxed">Optimizing workflows, measuring earned-value impact, and deploying advanced digital adoption platforms.</p>
             </div>
-            <div class="bg-[#181818] border border-gold/20 p-8 rounded-lg shadow-xl">
+            <div class="bg-charcoal-card border border-gold/20 p-8 rounded-lg shadow-xl">
                 <h3 class="text-xl font-bold text-gold mb-3">People</h3>
-                <p class="text-gray-400 text-sm">Empowering workforces through precision training, curriculum design, and empathetic change facilitation.</p>
+                <p class="text-gray-400 text-sm leading-relaxed">Empowering workforces through precision training, curriculum design, and empathetic change facilitation.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#141414] border-t border-gold/20 py-12 text-center text-sm text-gray-400">
+    <footer class="bg-charcoal-card border-t border-gold/20 py-12 text-center text-sm text-gray-400">
         <p>&copy; 2026 Griffin Consulting (dba of Griffin Property and Holdings). All rights reserved.</p>
     </footer>
 
