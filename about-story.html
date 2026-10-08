@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Griffin Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#0E0E0E',
+                        'charcoal-light': '#161616',
+                        'charcoal-card': '#1B1B1B',
+                        gold: '#C5A059',
+                        'gold-light': '#E2C27F',
+                        'gold-dark': '#9A732C',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-charcoal text-gray-200 font-sans antialiased selection:bg-gold selection:text-charcoal">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-charcoal-light border-b border-gold/25 sticky top-0 z-50 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="logo.jpeg" alt="Griffin Consulting Logo" class="h-14 w-auto rounded border border-gold/40 group-hover:border-gold transition">
+                    <div>
+                        <span class="text-xl font-bold tracking-wider text-gold block">GRIFFIN CONSULTING</span>
+                        <span class="text-xs text-gray-400 tracking-widest block font-medium">STRATEGY | PERFORMANCE | PEOPLE</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center font-medium">
+                    <a href="index.html" class="text-gray-300 hover:text-gold transition">Home</a>
+                    <div class="relative group py-2">
+                        <button class="text-gold border-b-2 border-gold pb-1 transition flex items-center space-x-1 focus:outline-none">
+                            <span>About Us</span>
+                            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-charcoal-card border border-gold/30 shadow-2xl rounded-lg py-2 hidden group-hover:block transition-all">
+                            <a href="about-story.html" class="block px-4 py-2.5 text-sm text-gold bg-gold/10">Our Story</a>
+                            <a href="about-people.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our People</a>
+                            <a href="about-strategy.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our Strategy</a>
+                        </div>
+                    </div>
+                    <div class="relative group py-2">
+                        <button class="text-gray-300 hover:text-gold transition flex items-center space-x-1 focus:outline-none">
+                            <span>Services</span>
+                            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-80 bg-charcoal-card border border-gold/30 shadow-2xl rounded-lg py-2 hidden group-hover:block transition-all">
+                            <a href="services-training.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Training Needs Analysis</a>
+                            <a href="services-curriculum.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Learning Architecture & Curriculum Design</a>
+                            <a href="services-development.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Custom Course & Training Material Development</a>
+                            <a href="services-rollout.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Training Rollout & Change Facilitation</a>
+                            <a href="services-roi.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Evaluation & ROI Analytics</a>
+                            <a href="services-dap.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Custom In-App Digital Adoption Platform (DAP)</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="text-gray-300 hover:text-gold transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <main class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="text-gold uppercase tracking-widest text-xs font-semibold block mb-2">About Us</span>
+        <h1 class="text-4xl font-extrabold text-white mb-8 border-b border-gold/20 pb-4">Our Story</h1>
+        
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg bg-charcoal-card border border-gold/20 p-8 rounded-xl shadow-2xl">
+            <p>
+                Operating as a DBA of Griffin Property and Holdings, <strong class="text-gold">Griffin Consulting</strong> was founded on a distinct premise: sustainable organizational success requires absolute alignment between high-level strategy, rigorous operational performance, and human-centric enablement.
+            </p>
+            <p>
+                Drawing from extensive public administration leadership, instructional design methodologies, and enterprise change management, we partner with agencies and corporations to transform complex operational hurdles into structured pathways for growth.
+            </p>
+            <p>
+                Our ethos bridges disciplined architecture with modern digital tools—ensuring that every project we undertake leaves institutions more capable, resilient, and ready for future challenges.
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-charcoal-card border-t border-gold/20 py-12 text-center text-sm text-gray-400 mt-20">
+        <p>&copy; 2026 Griffin Consulting (dba of Griffin Property and Holdings). All rights reserved.</p>
+    </footer>
+</body>
+</html>
