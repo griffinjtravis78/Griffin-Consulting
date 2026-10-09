@@ -80,6 +80,78 @@
             </p>
             
             <form action="https://formspree.io/f/xyekwqkz" method="POST" class="space-y-6">
+                <!-- Name Row -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gold mb-2">First Name</label>
+                        <input type="text" name="first_name" required class="w-full bg-charcoal-light border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gold mb-2">Last Name</label>
+                        <input type="text" name="last_name" required class="w-full bg-charcoal-light border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold">
+                    </div>
+                </div>
+
+                <!-- Email & Organization -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gold mb-2">Email Address</label>
+                        <input type="email" name="email" required class="w-full bg-charcoal-light border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gold mb-2">Organization / Agency</label>
+                        <input type="text" name="organization" class="w-full bg-charcoal-light border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold">
+                    </div>
+                </div>
+
+                <!-- Services of Interest Checklist -->
                 <div>
-                    <label class="block text-sm font-medium text-gold mb-2">Full Name</label>
-                    <input type="text" name="name" required class="w-full bg-charcoal-light border border-gold/30 rounded-lg
+                    <label class="block text-sm font-medium text-gold mb-3">Services of Interest (Select all that apply)</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-charcoal-light p-4 rounded-lg border border-gold/20">
+                        <label class="flex items-center space-x-3 text-sm text-gray-300 cursor-pointer hover:text-gold transition">
+                            <input type="checkbox" name="services[]" value="Training Needs Analysis" class="rounded border-gold/40 text-gold focus:ring-gold bg-charcoal">
+                            <span>Training Needs Analysis</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-sm text-gray-300 cursor-pointer hover:text-gold transition">
+                            <input type="checkbox" name="services[]" value="Learning Architecture & Curriculum Design" class="rounded border-gold/40 text-gold focus:ring-gold bg-charcoal">
+                            <span>Learning Architecture & Curriculum Design</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-sm text-gray-300 cursor-pointer hover:text-gold transition">
+                            <input type="checkbox" name="services[]" value="Custom Course & Training Material Development" class="rounded border-gold/40 text-gold focus:ring-gold bg-charcoal">
+                            <span>Custom Course & Training Material Development</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-sm text-gray-300 cursor-pointer hover:text-gold transition">
+                            <input type="checkbox" name="services[]" value="Training Rollout & Change Facilitation" class="rounded border-gold/40 text-gold focus:ring-gold bg-charcoal">
+                            <span>Training Rollout & Change Facilitation</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-sm text-gray-300 cursor-pointer hover:text-gold transition">
+                            <input type="checkbox" name="services[]" value="Evaluation & ROI Analytics" class="rounded border-gold/40 text-gold focus:ring-gold bg-charcoal">
+                            <span>Evaluation & ROI Analytics</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-sm text-gray-300 cursor-pointer hover:text-gold transition">
+                            <input type="checkbox" name="services[]" value="Custom In-App Digital Adoption Platform (DAP)" class="rounded border-gold/40 text-gold focus:ring-gold bg-charcoal">
+                            <span>Custom In-App Digital Adoption Platform (DAP)</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-sm text-gray-300 cursor-pointer hover:text-gold transition sm:col-span-2">
+                            <input type="checkbox" name="services[]" value="Learning Management System (LMS)" class="rounded border-gold/40 text-gold focus:ring-gold bg-charcoal">
+                            <span>Learning Management System (LMS)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Message Box -->
+                <div>
+                    <label class="block text-sm font-medium text-gold mb-2">Message / Inquiry</label>
+                    <textarea name="message" rows="4" required class="w-full bg-charcoal-light border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-gold text-charcoal font-bold rounded-lg shadow-lg hover:bg-gold-light transition">Send Inquiry</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-charcoal-card border-t border-gold/20 py-12 text-center text-sm text-gray-400 mt-20">
+        <p>&copy; 2026 Griffin Consulting (dba of Griffin Property and Holdings). All rights reserved.</p>
+    </footer>
+</body>
+</html>
