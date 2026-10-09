@@ -3,120 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Griffin Consulting | Strategy | Performance | People</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Griffin Consulting | Training, Development & Change Management</title>
+    <!-- Tailwind CSS CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        charcoal: '#0E0E0E',
-                        'charcoal-light': '#161616',
-                        'charcoal-card': '#1B1B1B',
-                        gold: '#C5A059',
-                        'gold-light': '#F3E5AB',
-                        'gold-dark': '#9A732C',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Alpine.js for interactive dropdown state -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-charcoal text-gray-200 font-sans antialiased selection:bg-gold selection:text-charcoal">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- Navigation Bar -->
-    <nav class="bg-charcoal-light border-b border-gold/25 sticky top-0 z-50 shadow-2xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-24 items-center">
+    <!-- Header / Navigation -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-xl font-bold tracking-tight text-slate-900">Griffin Consulting</span>
+            </div>
+            
+            <!-- Navigation with Dropdown Menu -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium items-center">
+                <a href="index.html" class="text-blue-600 font-semibold">Home</a>
                 
-                <!-- Logo & Brand in Upper Left -->
-                <a href="index.html" class="flex items-center space-x-3 group">
-                    <img src="logo.jpeg" alt="Griffin Consulting Logo" class="h-14 w-auto rounded border border-gold/40 group-hover:border-gold transition">
-                    <div>
-                        <span class="text-xl font-bold tracking-wider text-gold block">GRIFFIN CONSULTING</span>
-                        <span class="text-xs text-gray-400 tracking-widest block font-medium">STRATEGY | PERFORMANCE | PEOPLE</span>
+                <!-- Services Dropdown (Alpine.js controlled) -->
+                <div class="relative" x-data="{ open: false }" @mouseleave="open = false">
+                    <button @mouseover="open = true" @click="open = !open" class="text-slate-600 hover:text-blue-600 transition flex items-center gap-1 py-2">
+                        Services
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    
+                    <!-- Dropdown Panel -->
+                    <div x-show="open" 
+                         x-transition:enter="transition ease-out duration-200" 
+                         x-transition:enter-start="opacity-0 translate-y-1" 
+                         x-transition:enter-end="opacity-100 translate-y-0" 
+                         x-transition:leave="transition ease-in duration-150" 
+                         x-transition:leave-start="opacity-100 translate-y-0" 
+                         x-transition:leave-end="opacity-0 translate-y-1"
+                         class="absolute left-0 mt-1 w-72 rounded-xl bg-white shadow-lg border border-slate-200 py-2 z-50">
+                        <a href="services-lms.html" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition">
+                            <div class="font-semibold text-slate-900">Learning Management System (LMS)</div>
+                            <div class="text-xs text-slate-500 mt-0.5">Custom digital compliance & CEU platforms</div>
+                        </a>
+                        <!-- Future service sub-tabs can be added here cleanly -->
                     </div>
-                </a>
-
-                <!-- Main Menu Tabs -->
-                <div class="hidden md:flex space-x-8 items-center font-medium">
-                    <a href="index.html" class="text-gold border-b-2 border-gold pb-1 transition">Home</a>
-
-                    <!-- About Us Dropdown -->
-                    <div class="relative group py-2">
-                        <button class="text-gray-300 hover:text-gold transition flex items-center space-x-1 focus:outline-none">
-                            <span>About Us</span>
-                            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="absolute left-0 mt-2 w-64 bg-charcoal-card border border-gold/30 shadow-2xl rounded-lg py-2 hidden group-hover:block transition-all">
-                            <a href="about-story.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our Story</a>
-                            <a href="about-people.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our People</a>
-                            <a href="about-strategy.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our Strategy</a>
-                        </div>
-                    </div>
-
-                    <!-- Services Dropdown -->
-                    <div class="relative group py-2">
-                        <button class="text-gray-300 hover:text-gold transition flex items-center space-x-1 focus:outline-none">
-                            <span>Services</span>
-                            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="absolute left-0 mt-2 w-80 bg-charcoal-card border border-gold/30 shadow-2xl rounded-lg py-2 hidden group-hover:block transition-all">
-                            <a href="services-training.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Training Needs Analysis</a>
-                            <a href="services-curriculum.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Learning Architecture & Curriculum Design</a>
-                            <a href="services-development.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Custom Course & Training Material Development</a>
-                            <a href="services-rollout.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Training Rollout & Change Facilitation</a>
-                            <a href="services-roi.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Evaluation & ROI Analytics</a>
-                            <a href="services-dap.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Custom In-App Digital Adoption Platform (DAP)</a>
-                        </div>
-                    </div>
-
-                    <a href="contact.html" class="text-gray-300 hover:text-gold transition">Contact</a>
                 </div>
 
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="relative bg-gradient-to-b from-charcoal-light to-charcoal py-28 border-b border-gold/15">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-                <span class="bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#C5A059] bg-clip-text text-transparent">
-                    Elevating Enterprise Performance
-                </span>
-            </h1>
-            <p class="max-w-2xl mx-auto text-lg text-gray-300 mb-10 leading-relaxed">
-                Specialized consulting at the intersection of strategic modernization, operational capability, and human capital transformation.
-            </p>
-            <div class="flex justify-center">
-                <a href="contact.html" class="px-8 py-3.5 bg-gold text-charcoal font-bold rounded shadow-lg hover:bg-gold-light transition">Schedule a Consultation</a>
-            </div>
+                <a href="contact.html" class="text-slate-600 hover:text-blue-600 transition">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Core Pillars -->
-    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-charcoal-card border border-gold/20 p-8 rounded-lg shadow-xl">
-                <h3 class="text-xl font-bold text-gold mb-3">Strategy</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Aligning organizational vision with robust architecture, data-driven pathways, and change readiness plans.</p>
-            </div>
-            <div class="bg-charcoal-card border border-gold/20 p-8 rounded-lg shadow-xl">
-                <h3 class="text-xl font-bold text-gold mb-3">Performance</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Optimizing workflows, measuring earned-value impact, and deploying advanced digital adoption platforms.</p>
-            </div>
-            <div class="bg-charcoal-card border border-gold/20 p-8 rounded-lg shadow-xl">
-                <h3 class="text-xl font-bold text-gold mb-3">People</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Empowering workforces through precision training, curriculum design, and empathetic change facilitation.</p>
+    <!-- Hero Section -->
+    <main class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
+                Modernizing Training & Compliance Systems
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
+                Specialized digital infrastructure, instructional design, and operational software solutions built for regulated industries, professional associations, and public sector organizations.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="services-lms.html" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition shadow-sm text-sm">
+                    Explore LMS Services
+                </a>
+                <a href="contact.html" class="px-6 py-3 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-medium rounded-xl transition text-sm">
+                    Get in Touch
+                </a>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-charcoal-card border-t border-gold/20 py-12 text-center text-sm text-gray-400">
-        <p>&copy; 2026 Griffin Consulting (dba of Griffin Property and Holdings). All rights reserved.</p>
+    <footer class="bg-white border-t border-slate-200 mt-20 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-slate-500">
+            &copy; 2026 Griffin Consulting. All rights reserved.
+        </div>
     </footer>
 
 </body>
