@@ -1,4 +1,31 @@
-<!-- Navigation Bar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griffin Consulting | Strategy | Performance | People</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#0E0E0E',
+                        'charcoal-light': '#161616',
+                        'charcoal-card': '#1B1B1B',
+                        gold: '#C5A059',
+                        'gold-light': '#F3E5AB',
+                        'gold-dark': '#9A732C',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-charcoal text-gray-200 font-sans antialiased selection:bg-gold selection:text-charcoal">
+
+    <!-- Navigation Bar -->
     <nav class="bg-charcoal-light border-b border-gold/25 sticky top-0 z-50 shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-24 items-center">
@@ -53,3 +80,46 @@
             </div>
         </div>
     </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-b from-charcoal-light to-charcoal py-28 border-b border-gold/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                <span class="bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#C5A059] bg-clip-text text-transparent">
+                    Elevating Enterprise Performance
+                </span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-lg text-gray-300 mb-10 leading-relaxed">
+                Specialized consulting at the intersection of strategic modernization, operational capability, and human capital transformation.
+            </p>
+            <div class="flex justify-center">
+                <a href="contact.html" class="px-8 py-3.5 bg-gold text-charcoal font-bold rounded shadow-lg hover:bg-gold-light transition">Schedule a Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Pillars -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-charcoal-card border border-gold/20 p-8 rounded-lg shadow-xl">
+                <h3 class="text-xl font-bold text-gold mb-3">Strategy</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Aligning organizational vision with robust architecture, data-driven pathways, and change readiness plans.</p>
+            </div>
+            <div class="bg-charcoal-card border border-gold/20 p-8 rounded-lg shadow-xl">
+                <h3 class="text-xl font-bold text-gold mb-3">Performance</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Optimizing workflows, measuring earned-value impact, and deploying advanced digital adoption platforms.</p>
+            </div>
+            <div class="bg-charcoal-card border border-gold/20 p-8 rounded-lg shadow-xl">
+                <h3 class="text-xl font-bold text-gold mb-3">People</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Empowering workforces through precision training, curriculum design, and empathetic change facilitation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal-card border-t border-gold/20 py-12 text-center text-sm text-gray-400">
+        <p>&copy; 2026 Griffin Consulting (dba of Griffin Property and Holdings). All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
