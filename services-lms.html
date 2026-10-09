@@ -3,85 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Griffin Consulting | Custom LMS & Digital Solutions</title>
-    <!-- Tailwind CSS CDN for styling -->
+    <title>Digital Learning & Compliance Systems (LMS) | Griffin Consulting</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#0E0E0E',
+                        'charcoal-light': '#161616',
+                        'charcoal-card': '#1B1B1B',
+                        gold: '#C5A059',
+                        'gold-light': '#F3E5AB',
+                        'gold-dark': '#9A732C',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body class="bg-charcoal text-gray-200 font-sans antialiased selection:bg-gold selection:text-charcoal flex flex-col min-h-screen">
 
-    <!-- Header / Navigation -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <span class="text-xl font-bold tracking-tight text-slate-900">Griffin Consulting</span>
-            </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="index.html" class="text-slate-600 hover:text-blue-600 transition">Home</a>
-                <a href="services.html" class="text-blue-600 font-semibold">Services</a>
-                <a href="contact.html" class="text-slate-600 hover:text-blue-600 transition">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden p-8 sm:p-12">
-            
-            <!-- Breadcrumbs / Back Link -->
-            <div class="mb-6">
-                <a href="services.html" class="text-sm font-medium text-blue-600 hover:text-blue-800 transition flex items-center gap-1">
-                    &larr; Back to All Services
+    <!-- Navigation Bar -->
+    <nav class="bg-charcoal-light border-b border-gold/25 sticky top-0 z-50 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                
+                <!-- Logo & Brand in Upper Left -->
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="logo.jpeg" alt="Griffin Consulting Logo" class="h-14 w-auto rounded border border-gold/40 group-hover:border-gold transition">
+                    <div>
+                        <span class="text-xl font-bold tracking-wider text-gold block">GRIFFIN CONSULTING</span>
+                        <span class="text-xs text-gray-400 tracking-widest block font-medium">STRATEGY | PERFORMANCE | PEOPLE</span>
+                    </div>
                 </a>
+
+                <!-- Main Menu Tabs -->
+                <div class="hidden md:flex space-x-8 items-center font-medium">
+                    <a href="index.html" class="text-gray-300 hover:text-gold transition">Home</a>
+
+                    <!-- About Us Dropdown -->
+                    <div class="relative group py-2">
+                        <button class="text-gray-300 hover:text-gold transition flex items-center space-x-1 focus:outline-none">
+                            <span>About Us</span>
+                            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-charcoal-card border border-gold/30 shadow-2xl rounded-lg py-2 hidden group-hover:block transition-all">
+                            <a href="about-story.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our Story</a>
+                            <a href="about-people.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our People</a>
+                            <a href="about-strategy.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Our Strategy</a>
+                        </div>
+                    </div>
+
+                    <!-- Services Dropdown -->
+                    <div class="relative group py-2">
+                        <button class="text-gold border-b-2 border-gold pb-1 transition flex items-center space-x-1 focus:outline-none">
+                            <span>Services</span>
+                            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-80 bg-charcoal-card border border-gold/30 shadow-2xl rounded-lg py-2 hidden group-hover:block transition-all">
+                            <a href="services-training.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Training Needs Analysis</a>
+                            <a href="services-curriculum.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Learning Architecture & Curriculum Design</a>
+                            <a href="services-development.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Custom Course & Training Material Development</a>
+                            <a href="services-rollout.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Training Rollout & Change Facilitation</a>
+                            <a href="services-roi.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Evaluation & ROI Analytics</a>
+                            <a href="services-dap.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gold/15 hover:text-gold transition">Custom In-App Digital Adoption Platform (DAP)</a>
+                            <div class="border-t border-gold/20 my-1"></div>
+                            <a href="services-lms.html" class="block px-4 py-2.5 text-sm text-gold font-semibold bg-gold/15 transition">Learning Management System (LMS)</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="text-gray-300 hover:text-gold transition">Contact</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Page Header -->
+            <div class="bg-charcoal-card border border-gold/20 p-8 sm:p-12 rounded-xl shadow-2xl mb-12">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-gold tracking-tight mb-4">
+                    Digital Learning & Compliance Systems (LMS)
+                </h1>
+                <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
+                    Griffin Consulting delivers specialized, state-compliant digital learning management infrastructure and operational software designed specifically for highly regulated industries, professional associations, and public sector organizations. Our custom LMS solutions bridge the gap between complex regulatory requirements and modern digital user experiences.
+                </p>
             </div>
 
-            <!-- Page Title -->
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-                Digital Learning & Compliance Systems (LMS)
-            </h1>
-            
-            <!-- Main Overview -->
-            <p class="text-lg text-slate-600 leading-relaxed mb-8">
-                Griffin Consulting delivers specialized, state-compliant digital learning management infrastructure and operational software designed specifically for highly regulated industries, professional associations, and public sector organizations. Our custom LMS solutions bridge the gap between complex regulatory requirements and modern digital user experiences.
-            </p>
-
-            <hr class="border-slate-200 my-8">
-
-            <!-- Section: Service Options -->
-            <h2 class="text-2xl font-bold text-slate-900 mb-6">Engagement & Deployment Options</h2>
+            <!-- Engagement Options Section -->
+            <h2 class="text-2xl font-bold text-gold mb-6 tracking-wide">Engagement & Deployment Options</h2>
 
             <div class="space-y-6">
                 <!-- Option 1 -->
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <h3 class="text-lg font-semibold text-slate-900 mb-2">1. Partnership & Shared Growth Model</h3>
-                    <p class="text-slate-600 leading-relaxed">
+                <div class="bg-charcoal-card border border-gold/20 p-6 sm:p-8 rounded-xl shadow-xl">
+                    <h3 class="text-xl font-bold text-gold mb-3">1. Partnership & Shared Growth Model</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
                         A collaborative engagement model designed for professional associations and organizations seeking to introduce digital education or continuing education (CEU) programming without initial financial friction. We provide the fully hosted LMS platform and technical infrastructure, working alongside your organization to build new digital delivery channels.
                     </p>
                 </div>
 
                 <!-- Option 2 -->
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <h3 class="text-lg font-semibold text-slate-900 mb-2">2. Managed Subscription & Platform Licensing</h3>
-                    <p class="text-slate-600 leading-relaxed">
+                <div class="bg-charcoal-card border border-gold/20 p-6 sm:p-8 rounded-xl shadow-xl">
+                    <h3 class="text-xl font-bold text-gold mb-3">2. Managed Subscription & Platform Licensing</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
                         A dedicated software-as-a-service arrangement where organizations license our custom LMS and operational infrastructure for ongoing use. This option provides predictable administrative access, continuous platform hosting, security updates, and structured technical support tailored to your institutional needs.
                     </p>
                 </div>
 
                 <!-- Option 3 -->
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <h3 class="text-lg font-semibold text-slate-900 mb-2">3. Custom Development & White-Label Integration</h3>
-                    <p class="text-slate-600 leading-relaxed">
+                <div class="bg-charcoal-card border border-gold/20 p-6 sm:p-8 rounded-xl shadow-xl">
+                    <h3 class="text-xl font-bold text-gold mb-3">3. Custom Development & Integration</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
                         A comprehensive, tailorable deployment for organizations requiring a fully branded, independent portal or specialized regulatory data integrations. We configure, customize, and deploy dedicated system architecture built explicitly around your workflow requirements and compliance standards.
                     </p>
                 </div>
             </div>
 
-            <!-- Call to Action Footer -->
-            <div class="mt-12 p-6 bg-blue-50 rounded-xl border border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <!-- Call to Action Box -->
+            <div class="mt-12 bg-charcoal-card border border-gold/30 p-8 rounded-xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div>
-                    <h4 class="text-base font-semibold text-blue-950">Ready to explore a digital LMS for your organization?</h4>
-                    <p class="text-sm text-blue-700">Request a prototype walkthrough or schedule an exploratory consultation.</p>
+                    <h4 class="text-lg font-bold text-gold mb-1">Ready to explore a custom LMS for your organization?</h4>
+                    <p class="text-sm text-gray-400">Schedule a prototype walkthrough or exploratory consultation.</p>
                 </div>
-                <a href="contact.html" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition text-sm shadow-sm whitespace-nowrap">
+                <a href="contact.html" class="px-6 py-3 bg-gold text-charcoal font-bold rounded shadow-lg hover:bg-gold-light transition whitespace-nowrap text-sm">
                     Get in Touch
                 </a>
             </div>
@@ -90,10 +139,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 mt-20 py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-slate-500">
-            &copy; 2026 Griffin Consulting. All rights reserved.
-        </div>
+    <footer class="bg-charcoal-card border-t border-gold/20 py-12 text-center text-sm text-gray-400">
+        <p>&copy; 2026 Griffin Consulting (dba of Griffin Property and Holdings). All rights reserved.</p>
     </footer>
 
 </body>
